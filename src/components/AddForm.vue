@@ -23,17 +23,21 @@ export default {
     data(){
         return{
             add_baby: {
-                name: '', weight: '', color: '', sex: '', type: ''
+                name: null, weight: null, color: null, sex: null, type: null
              }
             }
 },
     methods:{
         sendBaby(){
+            if(!this.add_baby.name || !this.add_baby.weight || !this.add_baby.color || !this.add_baby.sex || !this.add_baby.type){
+                alert("Не введены данные!");
+            }
+            else{
             try{axios.post('https://demo-api.vsdev.space/api/farm/baby', this.add_baby)}
             catch(error){console.log(error);}
             alert("Добавлено!");
             location.reload();
-            
+            }
             
             
             
