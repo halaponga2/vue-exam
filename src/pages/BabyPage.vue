@@ -1,7 +1,7 @@
 <template>
   <div>
       <h1>Наши малыши</h1>
-      <button @click="showModal">Создать</button>
+      <button @click="showModal" v-if="babiesIsLoaded">Создать</button>
       <modal-form v-model:show="modalVisible"><add-form/></modal-form>
       <baby-list :babies="babies" v-if="babiesIsLoaded"/>
       <p v-else>Загрузка...</p>

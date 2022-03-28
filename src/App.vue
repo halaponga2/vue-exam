@@ -3,7 +3,7 @@
       <header><header-content/></header> 
       <aside>
         <side-pannel/>
-
+        <left-widget/>
       </aside>
       <main><router-view></router-view></main>
       <footer style="margin-left:auto">(c) Лобов Иван 201-327</footer>
@@ -13,12 +13,14 @@
 <script>
 import HeaderContent from "@/components/HeaderContent"
 import SidePannel from "@/components/SidePannel"
+import LeftWidget from "@/components/LeftWidget"
 
 export default {
 
   components: {
     HeaderContent,
     SidePannel,
+    LeftWidget,
   },
 
 }
@@ -41,6 +43,7 @@ body, html{
     'footer footer';
   grid-template-columns: 12rem 1fr;
   grid-template-rows: 5rem 1fr 3rem;
+  padding: 10px;
 }
 
 header {
@@ -61,6 +64,7 @@ footer {
 }
 
 @media (max-width: 600px) {
+
   .app {
     grid-template-areas:
       'header'
