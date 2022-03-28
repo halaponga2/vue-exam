@@ -12,7 +12,7 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/" class="nav-link link-dark">
+        <router-link to="/baby" class="nav-link link-dark">
           
           Малыши
         </router-link>

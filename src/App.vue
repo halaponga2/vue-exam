@@ -1,7 +1,10 @@
 <template>
   <div class="app bg-light">
-      <header><header-content/></header>
-      <aside><side-pannel/></aside>
+      <header><header-content/></header> 
+      <aside>
+        <side-pannel/>
+
+      </aside>
       <main><router-view></router-view></main>
       <footer style="margin-left:auto">(c) Лобов Иван 201-327</footer>
   </div>
@@ -30,7 +33,7 @@ body, html{
   height: 100%;
 }
 .app {
-  height: 100%;
+  min-height: 100%;
   display: grid;
   grid-template-areas:
     'header header'
